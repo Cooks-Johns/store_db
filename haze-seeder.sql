@@ -26,6 +26,7 @@ CREATE TABLE users (
 
 -- MERCH
 
+
 CREATE TABLE stock (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   price DECIMAL(3, 2) NOT NULL,
@@ -116,15 +117,14 @@ INSERT INTO  stock (title, price, brand) VALUES
   ('Java is my favorite!!!', 3),
   ('IntelliJ is A-OK', 5);
 
-INSERT INTO  juice (brand, title, price, ml, mg) VALUES
-  ('day dream', 'cucumber', '19.95', '60', 0),
-  ('day dream', 'cucumber', '19.95', '60', 3),
-  ('day dream', 'cucumber', '19.95', '60', 6),
-
-  ('Frost Factory', 'Tropic Freeze', '19.95', '100'),
-  ('Frost Factory', 'Iced Chee', '19.95', '100'),
-  ('Frost Factory', 'Crisp Apple', '19.95', '100'),
-  ('Frost Factory', 'Lemon Glaze', '19.95', '100')
+INSERT INTO  juice (brand, title, price, ml, mg, stock_id) VALUES
+  ('day dream', 'cucumber', 19.95, '60', 0, 1),
+  ('day dream', 'cucumber', 19.95, '60', 3, 2),
+  ('day dream', 'cucumber', 19.95, '60', 6, 3),
+  ('Frost Factory', 'Tropic Freez', 19.95, 100, 4),
+  ('Frost Factory', 'Iced Chee', 9.95, 100, 5),
+  ('Frost Factory', 'Crisp Apple', 19.95, 100, 6),
+  ('Frost Factory', 'Lemon Glaze', 19.95, 100, 7)
   ;
 
 -- SIZE
