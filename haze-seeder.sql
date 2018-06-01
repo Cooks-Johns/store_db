@@ -43,7 +43,7 @@ CREATE TABLE gear (
   FOREIGN KEY (stock_id) REFERENCES stock (id)
 );
 
-CREATE TABLE swagg (
+CREATE TABLE clothes (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   title VARCHAR(255) NOT NULL,
   price DECIMAL(3, 2) NOT NULL,
@@ -71,7 +71,7 @@ CREATE TABLE mods (
   title VARCHAR(255) NOT NULL,
   size int(3) NOT NULL,
   price DECIMAL(3, 2) NOT NULL,
-  batteries VARCHAR(5),
+  batteries VARCHAR(59),
   stock_id INT UNSIGNED DEFAULT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (stock_id) REFERENCES stock (id)
@@ -127,24 +127,31 @@ INSERT INTO  juice (brand, title, price, ml, mg) VALUES
   ('Frost Factory', 'Lemon Glaze', '19.95', '100')
   ;
 
-INSERT INTO  mods (brand, title, size, price, batteries, stock_id) VALUES
-  ('Mi-Pod', 'mini', '19.95', '60', NULL, 1),
-  ('day dream', 'cucumber', '19.95', '60', 2, 3),
-  ('day dream', 'cucumber', '19.95', '60', 3, 4),
+-- SIZE
+    --box
+    --mech
+    --salt
 
-  ('Frost Factory', 'Tropic Freeze', '19.95', '100'),
-  ('Frost Factory', 'Iced Chee', '19.95', '100'),
-  ('Frost Factory', 'Crisp Apple', '19.95', '100'),
-  ('Frost Factory', 'Lemon Glaze', '19.95', '100'),
+INSERT INTO  mods (brand, title, size, price, batteries, stock_id) VALUES
+  ('Mi-Pod', 'mini', 'salt', 27.99, '300mAh', 1),
+  ('Suorin Drop', 'Pod Vape', 'salt',27.99 , '300mAh', 2),
+  ('Ovns', 'saber Pod', 'salt', 16.99, ' 400mAh', 43,
+
+  ('Grip', 'VT100', 'box', 4.99, 'Removable 18650 or 26650 ', 4),
+  ('Wismec', 'LUXOTIC BF', 69.99, 'removable 186500', 5),
+
+  ('SMOK', 'Alien 220W', 99.99, 'Removable dual 18650 batteries', 6),
+  ('SMOK', 'g-PRIV 22', 99.99, 'Adjustable settings', 7),
+  ('SMOK', 'ALIEN MIN AL85', 64.99, 'Removable 18650', 8)
   ;
 
-INSERT INTO  swagg (brand, title, size, price) VALUES
-  ('day dream', 'cucumber', '19.95', '60', 0),
-  ('day dream', 'cucumber', '19.95', '60', 3),
-  ('day dream', 'cucumber', '19.95', '60', 6),
+INSERT INTO clothes (brand, title, size, price) VALUES
+  ('t-shirt', 'skull', 'xs', '25.95'),
+  ('t-shirt', 'skull', 's', '25.95'),
+  ('t-shirt', 'skull', 'm', '25.95'),
+  ('t-shirt', 'skull', 'l', '25.95'),
+  ('t-shirt', 'skull', 'xl', '25.95'),
+  ('t-shirt', 'skull', 'xxl', '25.95'),
+  ('t-shirt', 'skull', 'xxxl', '25.95')
 
-  ('Frost Factory', 'Tropic Freeze', '19.95', '100'),
-  ('Frost Factory', 'Iced Chee', '19.95', '100'),
-  ('Frost Factory', 'Crisp Apple', '19.95', '100'),
-  ('Frost Factory', 'Lemon Glaze', '19.95', '100'),
   ;
