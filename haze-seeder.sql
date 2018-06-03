@@ -1,95 +1,6 @@
-CREATE database Haze_Vape_DB;
-
-DROP TABLE IF EXISTS posts;
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS swagg;
-DROP TABLE IF EXISTS juice;
-DROP TABLE IF EXISTS mods;
-DROP TABLE IF EXISTS roles;
 
 
-CREATE TABLE roles (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  name VARCHAR(100) NOT NULL,
-  PRIMARY KEY (id)
-);
-
-CREATE TABLE users (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  name VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL,
-  password VARCHAR(100) NOT NULL,
-  role_id INT UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (role_id) REFERENCES roles (id)
-);
-
--- MERCH
-
-
-CREATE TABLE stock (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  price DECIMAL(3, 2) NOT NULL,
-  brand VARCHAR(100) NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  PRIMARY KEY (id)
-);
-
-CREATE TABLE gear (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  title VARCHAR(255) NOT NULL,
-  price DECIMAL(3, 2) NOT NULL        title, price
-  stock_id INT UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (stock_id) REFERENCES stock (id)
-);
-
-CREATE TABLE clothes (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  title VARCHAR(255) NOT NULL,
-  price DECIMAL(3, 2) NOT NULL,
-  size VARCHAR(100) NOT NULL,         title, price
-  stock_id INT UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (stock_id) REFERENCES stock (id)
-);
-
-CREATE TABLE juice (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  brand VARCHAR(100) NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  ml int(3) NOT NULL,
-  price DECIMAL(3, 2) NOT NULL,
-  mg VARCHAR(10),
-  stock_id INT UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (stock_id) REFERENCES stock (id)
-);
-
-CREATE TABLE mods (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  brand VARCHAR(100) NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  size int(3) NOT NULL,
-  price DECIMAL(3, 2) NOT NULL,
-  batteries VARCHAR(59),
-  stock_id INT UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (stock_id) REFERENCES stock (id)
-);
-
-CREATE TABLE tanks (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  brand VARCHAR(100) NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  size int(3) NOT NULL,
-  price DECIMAL(3, 2) NOT NULL,
-  stock_id INT UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (stock_id) REFERENCES stock (id)
-);
-
-
+USE Haze_Vabpe_db;
 
 
 INSERT INTO roles (name) VALUES ('admin');
@@ -152,6 +63,5 @@ INSERT INTO clothes (brand, title, size, price) VALUES
   ('t-shirt', 'skull', 'l', '25.95'),
   ('t-shirt', 'skull', 'xl', '25.95'),
   ('t-shirt', 'skull', 'xxl', '25.95'),
-  ('t-shirt', 'skull', 'xxxl', '25.95')
-
-  ;
+  ('t-shirt', 'skull', 'xxxl', '25.95'
+  );
