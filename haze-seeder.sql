@@ -39,9 +39,9 @@ INSERT INTO  juice (brand, title, price, ml, mg, stock_id) VALUES
   ;
 
 -- SIZE
-    --box
-    --mech
-    --salt
+#     --box
+#     --mech
+#     --salt
 
 INSERT INTO  mods (brand, title, size, price, batteries, stock_id) VALUES
   ('Mi-Pod', 'mini', 'salt', 27.99, '300mAh', 1),
@@ -53,8 +53,8 @@ INSERT INTO  mods (brand, title, size, price, batteries, stock_id) VALUES
 
   ('SMOK', 'Alien 220W', 99.99, 'Removable dual 18650 batteries', 6),
   ('SMOK', 'g-PRIV 22', 99.99, 'Adjustable settings', 7),
-  ('SMOK', 'ALIEN MIN AL85', 64.99, 'Removable 18650', 8)
-  ;
+  ('SMOK', 'ALIEN MIN AL85', 64.99, 'Removable 18650', 8
+  );
 
 INSERT INTO clothes (brand, title, size, price) VALUES
   ('t-shirt', 'skull', 'xs', '25.95'),

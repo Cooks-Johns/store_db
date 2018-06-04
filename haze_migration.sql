@@ -36,9 +36,8 @@ CREATE TABLE users (
 CREATE TABLE gear (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   title VARCHAR(255) NOT NULL,
-  price DECIMAL(3, 2) NOT NULL
-  stock_id INT UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (id)
+  price DECIMAL(3, 2) NOT NULL,
+  PRIMARY KEY(id)
 );
 
 
@@ -50,7 +49,6 @@ CREATE TABLE clothes (
   brand VARCHAR(255) NOT NULL,
   price DECIMAL(6, 4) NOT NULL,
   size VARCHAR(100) NOT NULL,
-  stock_id INT UNSIGNED DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
@@ -62,7 +60,6 @@ CREATE TABLE juice (
   ml int(3) NOT NULL,
   price DECIMAL(2, 2) NOT NULL,
   mg VARCHAR(10),
-  stock_id INT UNSIGNED DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
@@ -73,7 +70,6 @@ CREATE TABLE mods (
   size int(3) NOT NULL,
   price DECIMAL(3, 2) NOT NULL,
   batteries VARCHAR(59),
-  stock_id INT UNSIGNED DEFAULT NULL,
   PRIMARY KEY (id)
 );
 
@@ -83,6 +79,5 @@ CREATE TABLE tanks (
   title VARCHAR(255) NOT NULL,
   size int(3) NOT NULL,
   price DECIMAL(3, 2) NOT NULL,
-  stock_id INT UNSIGNED DEFAULT NULL,
   PRIMARY KEY (id)
 );
