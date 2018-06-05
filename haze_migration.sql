@@ -1,18 +1,6 @@
 use Haze_Vape_DB;
 
 
-# removed extra tables from haze_vape_db
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS gear;
-DROP TABLE IF EXISTS juice;
-DROP TABLE IF EXISTS mods;
-DROP TABLE IF EXISTS tanks;
-DROP TABLE IF EXISTS clothes;
-DROP TABLE IF EXISTS roles;
-DROP TABLE IF EXISTS stock;
-
-
-
 
 DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS users;
@@ -22,6 +10,7 @@ CREATE TABLE IF NOT EXISTS roles (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
   PRIMARY KEY (id)
+
 );
 
 CREATE TABLE IF NOT EXISTS users (
@@ -32,6 +21,7 @@ CREATE TABLE IF NOT EXISTS users (
   role_id INT UNSIGNED DEFAULT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (role_id) REFERENCES roles (id)
+
 );
 
 
