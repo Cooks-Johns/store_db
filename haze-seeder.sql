@@ -13,7 +13,9 @@ INSERT INTO users (name, email, role_id, password) VALUES
   ('sally', 'sally@example.com', 3, 'pass'),
   ('adam', 'adam@example.com', NULL, 'pass'),
   ('jane', 'jane@example.com', 2, 'pass'),
-  ('mike', 'mike@example.com', 1, 'pass')
+  ('mike', 'mike@example.com', 1, 'pass'),
+  ('Sally'), 'this@mymail.com', 3, 'pass'),
+  ('Hans'), this
   ;
 
 
